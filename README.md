@@ -8,17 +8,22 @@ ex. C:\laragon\www\my-project-api
 composer install
 ```
 
-### Step 2: Run Migration
+### Step 2: Create DB.
+```
+Create DB in your local server and name it 'my_proj_api'
+```
+
+### Step 3: Run Migration
 ```
 php artisan migrate
 ```
 
-### Step 3: Optimize
+### Step 4: Optimize
 ```
 php artisan optimize
 ```
 
-### Step 3: Passport Install
+### Step 5: Passport Install
 ```
 php artisan passport:install
 ```
