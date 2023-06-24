@@ -125,7 +125,6 @@ class UserService
             return $data;
         } catch (Throwable $exception) {
             Log::channel('local-dev')->error($exception->getMessage());
-
             return false;
         }
     }

@@ -46,17 +46,17 @@ class LoginController extends Controller
         }
     }
 
-    public static function attempt($credentials)
-    {
-        $users = User::where(['username' => $credentials['username']])->get();
-        foreach ($users as $user) {
-            if (Hash::check($credentials['password'], $user->password)) {
-                Auth::setUser($user);
-                return $user;
-            }
-        }
-        return false;
-    }
+//    public static function attempt($credentials)
+//    {
+//        $users = User::where(['username' => $credentials['username']])->get();
+//        foreach ($users as $user) {
+//            if (Hash::check($credentials['password'], $user->password)) {
+//                Auth::setUser($user);
+//                return $user;
+//            }
+//        }
+//        return false;
+//    }
 
     public function logout()
     {
