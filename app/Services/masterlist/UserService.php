@@ -29,6 +29,7 @@ class UserService
             })
             ->paginate($count);
 
+
         $user->getCollection()->transform(function ($user) {
             return [
                 'id'             => $user->id,
