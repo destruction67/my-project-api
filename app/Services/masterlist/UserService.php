@@ -2,6 +2,7 @@
 
 namespace App\Services\masterlist;
 
+use App\Events\Hello;
 use App\Http\Resources\UserRes;
 use App\Http\Resources\UserUnsubscribeRes;
 use App\Models\myapp\User;
@@ -58,7 +59,8 @@ class UserService
             $user->contact = $params['contact'];
             $user->active = $params['active'];
             $user->save();
-
+//            broadcast(new Hello('This is a message'));
+            event(new Hello(true));
             return $user;
         } catch (Throwable $exception) {
             Log::channel('local-dev')->error($exception->getMessage());

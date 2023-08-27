@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\masterlist\UserController;
+use App\Http\Controllers\MessageController;
 use App\Http\Controllers\ObjKeysController;
 use App\Http\Controllers\SignUpController;
 use Illuminate\Http\Request;
@@ -39,6 +40,8 @@ Route::group(['prefix' => 'my-app'], function () {
 
 
     });
+
+    Route::post('/send', [MessageController::class, 'send']);
 
 
 });

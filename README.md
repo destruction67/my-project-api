@@ -27,3 +27,8 @@ php artisan optimize
 ```
 php artisan passport:install
 ```
+
+### Step 6: Start Websockets
+```
+php artisan websockets:serve
+```
